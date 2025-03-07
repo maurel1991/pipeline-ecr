@@ -8,5 +8,12 @@ pipeline{
 
             }
         }
+       stage('dockerBuild'){
+            steps{
+                sh 'docker build -t webapp .'
+                sh 'docker images'
+
+            }
+        }
     }
 }
