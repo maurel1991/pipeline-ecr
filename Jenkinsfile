@@ -42,5 +42,11 @@ pipeline{
                 sh 'docker push 296945066713.dkr.ecr.us-east-1.amazonaws.com/pipelinerepo:v1.$BUILD_NUMBER'
             }
         }
+        stage('Testing'){
+            steps{
+                sh 'docker run -itd --name ola -p 8000:80 pipelinerepo'
+                
+            }
+        }
     }
 }
