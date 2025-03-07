@@ -44,7 +44,7 @@ pipeline{
         }
         stage('Testing'){
             steps{
-                sh 'docker run -itd --name ola -p 8000:80 pipelinerepo'
+                sh 'docker run -itd --name alamou -p 80:80 pipelinerepo'
                 
             }
         }
